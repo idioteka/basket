@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15E65" minimumToolsVersion="Xcode 7.0">
+    <entity name="Basket" representedClassName=".Basket" syncable="YES">
+        <attribute name="basketDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="basketeerCount" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="createdAtInterval" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="detailString" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dueDateInterval" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="icon" attributeType="String" syncable="YES"/>
+        <attribute name="id" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="inviteId" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="isArchived" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isLocked" attributeType="Boolean" syncable="YES"/>
+        <attribute name="itemCount" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="pending" attributeType="Boolean" syncable="YES"/>
+        <attribute name="updatedAtInterval" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="basketDetails" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BasketDetails" inverseName="basket" inverseEntity="BasketDetails" syncable="YES"/>
+        <relationship name="bill" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Bill" inverseName="basket" inverseEntity="Bill" syncable="YES"/>
+        <relationship name="invitedBy" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="invitedBaskets" inverseEntity="User" syncable="YES"/>
+        <relationship name="owner" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="ownedBaskets" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="BasketActivity" representedClassName=".BasketActivity" syncable="YES">
+        <attribute name="createdAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="icon" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="message" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pretyTime" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="basketDetails" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BasketDetails" inverseName="activities" inverseEntity="BasketDetails" syncable="YES"/>
+    </entity>
+    <entity name="BasketDetails" representedClassName=".BasketDetails" syncable="YES">
+        <attribute name="isMuted" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <relationship name="acceptedUsersSet" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="acceptedBaskets" inverseEntity="User" syncable="YES"/>
+        <relationship name="activities" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BasketActivity" inverseName="basketDetails" inverseEntity="BasketActivity" syncable="YES"/>
+        <relationship name="basket" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Basket" inverseName="basketDetails" inverseEntity="Basket" syncable="YES"/>
+        <relationship name="items" toMany="YES" deletionRule="Nullify" destinationEntity="BasketItem" inverseName="basketDetails" inverseEntity="BasketItem" syncable="YES"/>
+        <relationship name="location" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="basketDetails" inverseEntity="Location" syncable="YES"/>
+        <relationship name="pendingUsersSet" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="pendingBaskets" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="BasketItem" representedClassName=".BasketItem" syncable="YES">
+        <attribute name="id" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="price" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="statusId" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="actionedBy" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="actionedBaskets" inverseEntity="User" syncable="YES"/>
+        <relationship name="basketDetails" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BasketDetails" inverseName="items" inverseEntity="BasketDetails" syncable="YES"/>
+        <relationship name="recommendation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Recommendation" inverseName="items" inverseEntity="Recommendation" syncable="YES"/>
+    </entity>
+    <entity name="Bill" representedClassName=".Bill" syncable="YES">
+        <attribute name="total" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="basket" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Basket" inverseName="bill" inverseEntity="Basket" syncable="YES"/>
+        <relationship name="billItems" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="BillItem" inverseName="bill" inverseEntity="BillItem" syncable="YES"/>
+    </entity>
+    <entity name="BillItem" representedClassName=".BillItem" syncable="YES">
+        <attribute name="amount" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="bill" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Bill" inverseName="billItems" inverseEntity="Bill" syncable="YES"/>
+        <relationship name="person" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="billItems" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="Location" representedClassName=".Location" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="map" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="basketDetails" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BasketDetails" inverseName="location" inverseEntity="BasketDetails" syncable="YES"/>
+    </entity>
+    <entity name="Recommendation" representedClassName=".Recommendation" syncable="YES">
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="url" attributeType="String" syncable="YES"/>
+        <relationship name="items" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BasketItem" inverseName="recommendation" inverseEntity="BasketItem" syncable="YES"/>
+    </entity>
+    <entity name="User" representedClassName=".User" syncable="YES">
+        <attribute name="avatar" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <relationship name="acceptedBaskets" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BasketDetails" inverseName="acceptedUsersSet" inverseEntity="BasketDetails" syncable="YES"/>
+        <relationship name="actionedBaskets" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BasketItem" inverseName="actionedBy" inverseEntity="BasketItem" syncable="YES"/>
+        <relationship name="billItems" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BillItem" inverseName="person" inverseEntity="BillItem" syncable="YES"/>
+        <relationship name="invitedBaskets" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Basket" inverseName="invitedBy" inverseEntity="Basket" syncable="YES"/>
+        <relationship name="ownedBaskets" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Basket" inverseName="owner" inverseEntity="Basket" syncable="YES"/>
+        <relationship name="pendingBaskets" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BasketDetails" inverseName="pendingUsersSet" inverseEntity="BasketDetails" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Basket" positionX="-63" positionY="-18" width="128" height="315"/>
+        <element name="BasketActivity" positionX="-27" positionY="117" width="128" height="135"/>
+        <element name="BasketDetails" positionX="-54" positionY="54" width="128" height="150"/>
+        <element name="BasketItem" positionX="0" positionY="117" width="128" height="135"/>
+        <element name="Bill" positionX="-27" positionY="117" width="128" height="90"/>
+        <element name="BillItem" positionX="-18" positionY="126" width="128" height="90"/>
+        <element name="Location" positionX="-9" positionY="135" width="128" height="120"/>
+        <element name="Recommendation" positionX="-27" positionY="99" width="128" height="90"/>
+        <element name="User" positionX="-36" positionY="63" width="128" height="210"/>
+    </elements>
+</model>

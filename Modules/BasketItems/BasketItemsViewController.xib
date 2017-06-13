@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BasketItemsViewController" customModule="Basket" customModuleProvider="target">
+            <connections>
+                <outlet property="emptyScreenView" destination="4HN-4K-aOh" id="A5c-65-aKx"/>
+                <outlet property="instructionSubtitleLabel" destination="HTJ-xK-tH1" id="Tqj-aE-I28"/>
+                <outlet property="instructionTitleLabel" destination="3f2-TA-VnZ" id="PHJ-be-Esw"/>
+                <outlet property="tableView" destination="y0Z-pL-d7h" id="enq-6d-4X7"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="y0Z-pL-d7h">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4HN-4K-aOh">
+                    <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3f2-TA-VnZ">
+                            <rect key="frame" x="40" y="40" width="520" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="itemActions" translatesAutoresizingMaskIntoConstraints="NO" id="mko-GL-M9Z">
+                            <rect key="frame" x="0.0" y="101" width="600" height="82"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HTJ-xK-tH1">
+                            <rect key="frame" x="40" y="223" width="520" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="HTJ-xK-tH1" secondAttribute="trailing" constant="40" id="4Qa-rt-YmT"/>
+                        <constraint firstItem="HTJ-xK-tH1" firstAttribute="centerX" secondItem="4HN-4K-aOh" secondAttribute="centerX" id="6qT-AF-Eni"/>
+                        <constraint firstItem="HTJ-xK-tH1" firstAttribute="leading" secondItem="4HN-4K-aOh" secondAttribute="leading" constant="40" id="OjC-H4-oKw"/>
+                        <constraint firstItem="3f2-TA-VnZ" firstAttribute="centerX" secondItem="4HN-4K-aOh" secondAttribute="centerX" id="PB3-rJ-Zjk"/>
+                        <constraint firstAttribute="trailing" secondItem="3f2-TA-VnZ" secondAttribute="trailing" constant="40" id="VeK-Aj-vOw"/>
+                        <constraint firstItem="mko-GL-M9Z" firstAttribute="top" secondItem="3f2-TA-VnZ" secondAttribute="bottom" constant="40" id="YyX-HS-jX0"/>
+                        <constraint firstItem="HTJ-xK-tH1" firstAttribute="top" secondItem="mko-GL-M9Z" secondAttribute="bottom" constant="40" id="duV-Mx-gqI"/>
+                        <constraint firstAttribute="trailing" secondItem="mko-GL-M9Z" secondAttribute="trailing" id="eN7-1d-kNh"/>
+                        <constraint firstItem="mko-GL-M9Z" firstAttribute="leading" secondItem="4HN-4K-aOh" secondAttribute="leading" id="hob-QQ-UO9"/>
+                        <constraint firstItem="3f2-TA-VnZ" firstAttribute="leading" secondItem="4HN-4K-aOh" secondAttribute="leading" constant="40" id="lyx-06-Sdx"/>
+                        <constraint firstItem="3f2-TA-VnZ" firstAttribute="top" secondItem="4HN-4K-aOh" secondAttribute="top" constant="40" id="t1F-a6-4YZ"/>
+                        <constraint firstItem="mko-GL-M9Z" firstAttribute="centerX" secondItem="4HN-4K-aOh" secondAttribute="centerX" id="und-TU-JZY"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="PB3-rJ-Zjk"/>
+                            <exclude reference="und-TU-JZY"/>
+                        </mask>
+                    </variation>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="4HN-4K-aOh" firstAttribute="trailing" secondItem="y0Z-pL-d7h" secondAttribute="trailing" id="4K4-Df-an8"/>
+                <constraint firstItem="4HN-4K-aOh" firstAttribute="top" secondItem="y0Z-pL-d7h" secondAttribute="top" constant="64" id="Aan-zx-fqG"/>
+                <constraint firstItem="y0Z-pL-d7h" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="IYU-kr-8o1"/>
+                <constraint firstItem="y0Z-pL-d7h" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="YMG-eV-GtI"/>
+                <constraint firstAttribute="trailing" secondItem="y0Z-pL-d7h" secondAttribute="trailing" id="dE5-Dv-Q6q"/>
+                <constraint firstAttribute="bottom" secondItem="y0Z-pL-d7h" secondAttribute="bottom" id="mg0-13-V9s"/>
+                <constraint firstItem="y0Z-pL-d7h" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="pU8-ib-Nhz"/>
+                <constraint firstItem="4HN-4K-aOh" firstAttribute="bottom" secondItem="y0Z-pL-d7h" secondAttribute="bottom" id="xlH-Wh-zzP"/>
+                <constraint firstItem="4HN-4K-aOh" firstAttribute="leading" secondItem="y0Z-pL-d7h" secondAttribute="leading" id="yYF-mw-MjG"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="IYU-kr-8o1"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+    <resources>
+        <image name="itemActions" width="480" height="82"/>
+    </resources>
+</document>

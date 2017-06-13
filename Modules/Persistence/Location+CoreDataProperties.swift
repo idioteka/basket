@@ -1,0 +1,23 @@
+//
+//  Location+CoreDataProperties.swift
+//  Basket
+//
+//  Created by Mario Radonic on 01/05/16.
+//  Copyright © 2016 Basket Team. All rights reserved.
+//
+//  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
+//  to delete and recreate this implementation file for your updated model.
+//
+
+import Foundation
+import CoreData
+
+extension Location {
+
+    @NSManaged var address: String?
+    @NSManaged var latitude: String?
+    @NSManaged var longitude: String?
+    @NSManaged var map: String?
+    @NSManaged var basketDetails: BasketDetails?
+
+}

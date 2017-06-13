@@ -1,0 +1,9 @@
+{
+    "id": 1,
+    "first_name": "Ivan",
+    "last_name": "Božić",
+    "email": "ivan.bozic@outlook.com",
+    "access_token": "94bad67b-fce6-4b88-a5c5-05f7989de474",
+    "refresh_token": "21c89a6c-c3f4-4502-b631-1d9000bfeecf",
+    "avatar": "http://bsktapp.com/assets/user/default-avatar-purple-336868ea20405d32da0b76a7aa0db73665960308afd5bef4801ddc4549e3050e.png"
+}

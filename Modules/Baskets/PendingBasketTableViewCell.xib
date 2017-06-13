@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="172" id="KGk-i7-Jjw" customClass="PendingBasketTableViewCell" customModule="Basket" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="172"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="171"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Icon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mOR-wf-eUL">
+                        <rect key="frame" x="132" y="0.0" width="57" height="59"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mirko's Awesome Party" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5XZ-yX-xh6">
+                        <rect key="frame" x="15" y="59" width="290" height="21"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="in 4 days, 14 people" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MXS-ef-CfI">
+                        <rect key="frame" x="15" y="85" width="290" height="17"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VIM-re-P5O">
+                        <rect key="frame" x="66" y="99" width="190" height="72"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wa3-qW-QZf">
+                                <rect key="frame" x="82" y="16" width="129" height="38"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.060231345870000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="RvN-1Z-hlp"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="38" id="aJq-75-4yY"/>
+                                    <constraint firstAttribute="height" constant="32" id="oba-aU-0CC"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                                <state key="normal" title="Ⅹ DECLINE"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="RvN-1Z-hlp"/>
+                                        <exclude reference="oba-aU-0CC"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YJH-SX-EiG">
+                                <rect key="frame" x="-16" y="16" width="120" height="38"/>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.72156862749999995" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="OsZ-LB-qyr"/>
+                                    <constraint firstAttribute="height" constant="32" id="nZu-Ac-LgD"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="38" id="ziS-PN-7H8"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                                <state key="normal" title="✓ ACCEPT"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="OsZ-LB-qyr"/>
+                                        <exclude reference="nZu-Ac-LgD"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="YJH-SX-EiG" secondAttribute="bottom" id="QgD-Ie-1kn"/>
+                            <constraint firstItem="Wa3-qW-QZf" firstAttribute="centerY" secondItem="VIM-re-P5O" secondAttribute="centerY" id="RiU-00-29M"/>
+                            <constraint firstAttribute="trailing" secondItem="Wa3-qW-QZf" secondAttribute="trailing" id="Zan-xi-PKH"/>
+                            <constraint firstAttribute="bottom" secondItem="Wa3-qW-QZf" secondAttribute="bottom" id="gIC-Ac-DzV"/>
+                            <constraint firstItem="YJH-SX-EiG" firstAttribute="centerY" secondItem="VIM-re-P5O" secondAttribute="centerY" id="hjL-89-kAj"/>
+                            <constraint firstItem="Wa3-qW-QZf" firstAttribute="top" secondItem="VIM-re-P5O" secondAttribute="top" id="iqM-4y-KVS"/>
+                            <constraint firstItem="Wa3-qW-QZf" firstAttribute="leading" secondItem="YJH-SX-EiG" secondAttribute="trailing" constant="15" id="kuS-9g-UVj"/>
+                            <constraint firstItem="YJH-SX-EiG" firstAttribute="leading" secondItem="VIM-re-P5O" secondAttribute="leading" id="par-iR-poC"/>
+                            <constraint firstItem="YJH-SX-EiG" firstAttribute="top" secondItem="VIM-re-P5O" secondAttribute="top" id="s7L-gx-8dG"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="QgD-Ie-1kn"/>
+                                <exclude reference="s7L-gx-8dG"/>
+                                <exclude reference="gIC-Ac-DzV"/>
+                                <exclude reference="iqM-4y-KVS"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="mOR-wf-eUL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="0Wn-iF-KXL"/>
+                    <constraint firstItem="VIM-re-P5O" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="GSb-cK-Y8D"/>
+                    <constraint firstItem="MXS-ef-CfI" firstAttribute="leading" secondItem="5XZ-yX-xh6" secondAttribute="leading" id="T1d-95-Ffh"/>
+                    <constraint firstAttribute="trailing" secondItem="VIM-re-P5O" secondAttribute="trailing" constant="10" id="YEe-Ll-SMm"/>
+                    <constraint firstItem="MXS-ef-CfI" firstAttribute="leading" secondItem="5XZ-yX-xh6" secondAttribute="leading" id="Z3r-hr-u2D"/>
+                    <constraint firstItem="MXS-ef-CfI" firstAttribute="trailing" secondItem="5XZ-yX-xh6" secondAttribute="trailing" id="Zb0-ZS-e5b"/>
+                    <constraint firstItem="mOR-wf-eUL" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="ZkU-Rz-Fo3"/>
+                    <constraint firstAttribute="bottom" secondItem="VIM-re-P5O" secondAttribute="bottom" id="iTi-hr-WgG"/>
+                    <constraint firstItem="MXS-ef-CfI" firstAttribute="top" secondItem="5XZ-yX-xh6" secondAttribute="bottom" constant="5" id="jg8-Ee-LNv"/>
+                    <constraint firstAttribute="trailing" secondItem="5XZ-yX-xh6" secondAttribute="trailing" constant="15" id="sg8-og-oP8"/>
+                    <constraint firstItem="VIM-re-P5O" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="tdf-E2-tjj"/>
+                    <constraint firstItem="5XZ-yX-xh6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="tnf-x2-7ap"/>
+                    <constraint firstItem="5XZ-yX-xh6" firstAttribute="top" secondItem="mOR-wf-eUL" secondAttribute="bottom" id="vTT-mm-qgs"/>
+                    <constraint firstItem="VIM-re-P5O" firstAttribute="top" secondItem="MXS-ef-CfI" secondAttribute="bottom" id="wZg-hU-hfD"/>
+                    <constraint firstItem="5XZ-yX-xh6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="59" id="yUd-rZ-x9O"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="T1d-95-Ffh"/>
+                        <exclude reference="GSb-cK-Y8D"/>
+                        <exclude reference="YEe-Ll-SMm"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="acceptButton" destination="YJH-SX-EiG" id="ScD-fp-SHB"/>
+                <outlet property="declineButton" destination="Wa3-qW-QZf" id="Wyu-r7-OMl"/>
+                <outlet property="iconLabel" destination="mOR-wf-eUL" id="n5E-ts-FJW"/>
+                <outlet property="subtitleLabel" destination="MXS-ef-CfI" id="bs0-9b-3vt"/>
+                <outlet property="titleLabel" destination="5XZ-yX-xh6" id="O8G-dC-NNk"/>
+            </connections>
+            <point key="canvasLocation" x="600" y="426"/>
+        </tableViewCell>
+    </objects>
+</document>
